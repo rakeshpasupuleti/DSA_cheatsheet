@@ -1,7 +1,7 @@
 
 
 
-# C++ Cheat Sheet
+# DSA Cheat Sheet
 
 ## C++ Basics
 

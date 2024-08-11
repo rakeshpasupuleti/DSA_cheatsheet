@@ -153,23 +153,33 @@ for (auto element : container) {
     // code to execute for each element
 }
 ```
-```
 
 
-## Functions
 
-### Definition
+
+## C++ Functions
+
+### Function Definition
+Defines a function with a return type, name, parameters, and body.
 ```cpp
-int add(int a, int b) {
-    return a + b;
-}
-
-void printMessage() {
-    cout << "Hello, World!" << endl;
+return_type function_name(parameters) {
+    // code to execute
+    return value; // if return_type is not void
 }
 ```
 
-### Overloading
+
+
+### Function Declaration
+Declares a function before its definition, allowing it to be used before its full implementation.
+```cpp
+return_type function_name(parameters);
+```
+
+
+
+### Function Overloading
+Allows multiple functions with the same name but different parameters.
 ```cpp
 int add(int a, int b) {
     return a + b;
@@ -179,6 +189,50 @@ double add(double a, double b) {
     return a + b;
 }
 ```
+
+### Inline Functions
+Defines functions that are expanded at the point of call, reducing function call overhead.
+```cpp
+inline return_type function_name(parameters) {
+    // code to execute
+}
+```
+
+
+
+### Lambda Functions
+Anonymous functions defined at the point of use, useful for short snippets of code.
+```cpp
+auto lambda = [](parameters) {
+    // code to execute
+    return value;
+};
+```
+
+
+
+### Function Pointers
+Variables that store the address of a function, allowing functions to be passed as arguments.
+```cpp
+return_type (*pointer_name)(parameters);
+```
+
+
+
+### Recursion
+A function that calls itself to solve smaller instances of a problem.
+```cpp
+return_type recursive_function(parameters) {
+    if (base_condition) {
+        return base_value;
+    } else {
+        return recursive_function(smaller_problem);
+    }
+}
+```
+
+
+
 
 ## Arrays & Strings
 

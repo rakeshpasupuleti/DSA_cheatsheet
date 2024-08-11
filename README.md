@@ -39,18 +39,80 @@ unsigned int a;
 long long int b;
 ```
 
-## Control Structures
 
-### Conditionals
+## C++ Conditional Statements
+
+### `if` Statement
+Evaluates a condition and executes a block of code if the condition is true.
 ```cpp
 if (condition) {
-    // code
-} else if (another_condition) {
-    // code
-} else {
-    // code
+    // code to execute if condition is true
 }
 ```
+
+### `if-else` Statement
+Provides an alternative block of code to execute if the condition is false.
+```cpp
+if (condition) {
+    // code to execute if condition is true
+} else {
+    // code to execute if condition is false
+}
+```
+
+### `if-else if-else` Ladder
+Checks multiple conditions in sequence.
+```cpp
+if (condition1) {
+    // code to execute if condition1 is true
+} else if (condition2) {
+    // code to execute if condition2 is true
+} else {
+    // code to execute if none of the above conditions are true
+}
+```
+
+### `switch` Statement
+Evaluates an expression and executes code corresponding to the matching case.
+```cpp
+switch (expression) {
+    case value1:
+        // code to execute if expression == value1
+        break;
+    case value2:
+        // code to execute if expression == value2
+        break;
+    default:
+        // code to execute if expression doesn't match any case
+}
+```
+
+### Conditional (Ternary) Operator
+Shorthand for simple `if-else` statements.
+```cpp
+condition ? expression_if_true : expression_if_false;
+```
+
+### `goto` Statement
+Jumps to a specific label in the code (generally discouraged).
+```cpp
+goto label;
+// some code
+label:
+    // code to execute when jumping to the label
+```
+
+### `try-catch` Blocks
+Handles exceptions to manage errors.
+```cpp
+try {
+    // code that may throw exceptions
+} catch (const exception_type& e) {
+    // code to handle exceptions
+}
+```
+```
+
 
 ### Loops
 ```cpp

@@ -114,27 +114,69 @@ try {
 ```
 
 
-### Loops
-```cpp
-// For loop
-for (int i = 0; i < n; ++i) {
-    // code
-}
+Here's a concise section for your GitHub README.md that covers the various types of loops in C++:
 
-// While loop
+```markdown
+## C++ Loops
+
+### `for` Loop
+Used for iterating over a range with a defined start, end, and increment.
+```cpp
+for (initialization; condition; update) {
+    // code to execute on each iteration
+}
+```
+
+**Example:**
+```cpp
+for (int i = 0; i < 10; ++i) {
+    cout << i << " ";
+}
+```
+
+### `while` Loop
+Executes a block of code as long as the condition is true.
+```cpp
+while (condition) {
+    // code to execute while condition is true
+}
+```
+
+**Example:**
+```cpp
 int i = 0;
-while (i < n) {
-    // code
+while (i < 10) {
+    cout << i << " ";
     ++i;
 }
+```
 
-// Do-while loop
+### `do-while` Loop
+Executes a block of code at least once, and then repeats while the condition is true.
+```cpp
+do {
+    // code to execute
+} while (condition);
+```
+
+**Example:**
+```cpp
 int i = 0;
 do {
-    // code
+    cout << i << " ";
     ++i;
-} while (i < n);
+} while (i < 10);
 ```
+
+### Range-Based `for` Loop
+Introduced in C++11, it iterates over elements of a container or range.
+```cpp
+for (auto element : container) {
+    // code to execute for each element
+}
+```
+```
+
 
 ## Functions
 

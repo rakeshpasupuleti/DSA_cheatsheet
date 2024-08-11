@@ -1,6 +1,6 @@
-Certainly! Here's a GitHub README.md format for your C++ cheat sheet. You can copy and paste this into your GitHub repository's README.md file.
 
-```markdown
+
+
 # C++ Cheat Sheet
 
 ## C++ Basics

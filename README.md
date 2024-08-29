@@ -338,6 +338,9 @@ s.erase(10);
 ```cpp
 sort(vec.begin(), vec.end()); // Sort vector
 reverse(vec.begin(), vec.end()); // Reverse vector
+vec.resize(n+1, 0); //Resizes vector
+iota(vec.begin(), vec.end(), initialVal); // Initializes the vector with the sequenital values starting from initial val
+fill(vec.begin(), vec.end(), val); //Initializes the vector with a val
 ```
 
 ## Input/Output

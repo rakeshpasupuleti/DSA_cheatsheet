@@ -418,7 +418,7 @@ cout << p.first << " " << p.second;
 tuple<int, string, double> t = make_tuple(1, "one", 1.1);
 cout << get<0>(t) << " " << get<1>(t) << " " << get<2>(t);
 ```
-```
+
 ### Disjoint Set (Union-Find)
 
 The Disjoint Set (also known as Union-Find) is a data structure that keeps track of a partition of a set into disjoint subsets. It supports two primary operations:
@@ -504,3 +504,4 @@ int main() {
     return 0;
 }
 
+```

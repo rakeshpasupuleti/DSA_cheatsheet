@@ -3,6 +3,26 @@
 
 # DSA Cheat Sheet
 
+# DSA Cheat Sheet
+
+## Index
+- [C++ Basics](#c-basics)
+- [Data Types](#data-types)
+- [C++ Conditional Statements](#c-conditional-statements)
+- [C++ Loops](#c-loops)
+- [C++ Functions](#c-functions)
+- [Arrays & Strings](#arrays--strings)
+- [Standard Template Library (STL)](#standard-template-library-stl)
+- [Input/Output](#inputoutput)
+- [Pointers & References](#pointers--references)
+- [Object-Oriented Programming (OOP)](#object-oriented-programming-oop)
+- [Common Algorithms](#common-algorithms)
+- [Error Handling](#error-handling)
+- [Miscellaneous](#miscellaneous)
+
+
+
+
 ## C++ Basics
 
 ### Headers & Namespaces

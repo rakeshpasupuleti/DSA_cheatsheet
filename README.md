@@ -419,4 +419,88 @@ tuple<int, string, double> t = make_tuple(1, "one", 1.1);
 cout << get<0>(t) << " " << get<1>(t) << " " << get<2>(t);
 ```
 ```
+### Disjoint Set (Union-Find)
+
+The Disjoint Set (also known as Union-Find) is a data structure that keeps track of a partition of a set into disjoint subsets. It supports two primary operations:
+
+1. **Find**: Determine which subset a particular element is in. This can be used for determining if two elements are in the same subset.
+2. **Union**: Join two subsets into a single subset.
+
+#### Implementation in C++
+
+```cpp
+#include <iostream>
+#include <vector>
+
+class DisjointSet {
+private:
+    std::vector<int> parent, rank;
+
+public:
+    // Initialize the disjoint set with n elements
+    DisjointSet(int n) {
+        parent.resize(n);
+        rank.resize(n, 0);
+        for (int i = 0; i < n; i++) {
+            parent[i] = i;
+        }
+    }
+
+    // Find the representative of the set containing 'u'
+    int find(int u) {
+        if (parent[u] != u) {
+            parent[u] = find(parent[u]); // Path compression
+        }
+        return parent[u];
+    }
+
+    // Union of two sets containing 'u' and 'v'
+    void unionSets(int u, int v) {
+        int rootU = find(u);
+        int rootV = find(v);
+
+        if (rootU != rootV) {
+            if (rank[rootU] > rank[rootV]) {
+                parent[rootV] = rootU;
+            } else if (rank[rootU] < rank[rootV]) {
+                parent[rootU] = rootV;
+            } else {
+                parent[rootV] = rootU;
+                rank[rootU]++;
+            }
+        }
+    }
+
+// Count the number of disjoint sets
+    int countSets() {
+        std::unordered_set<int> uniqueSets;
+        for (int i = 0; i < parent.size(); i++) {
+            uniqueSets.insert(find(i));
+        }
+        return uniqueSets.size();
+    }
+};
+
+int main() {
+    int n = 5; // Number of elements
+    DisjointSet ds(n);
+
+    ds.unionSets(0, 2);
+    ds.unionSets(4, 2);
+    ds.unionSets(3, 1);
+
+    if (ds.find(4) == ds.find(0)) {
+        std::cout << "4 and 0 are in the same set.\n";
+    } else {
+        std::cout << "4 and 0 are in different sets.\n";
+    }
+
+    if (ds.find(1) == ds.find(0)) {
+        std::cout << "1 and 0 are in the same set.\n";
+    } else {
+        std::cout << "1 and 0 are in different sets.\n";
+    }
+
+    return 0;
+}
 

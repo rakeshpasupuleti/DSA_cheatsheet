@@ -7,7 +7,7 @@
 
 ## Index
 - [C++ Basics](#c-basics)
-- [Data Types](#data-types)
+                - [Data Types](#data-types)
 - [C++ Conditional Statements](#c-conditional-statements)
 - [C++ Loops](#c-loops)
 - [C++ Functions](#c-functions)
